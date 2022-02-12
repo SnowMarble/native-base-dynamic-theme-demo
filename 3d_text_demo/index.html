@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi There</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      main {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        perspective: 800px;
+      }
+
+      h1 {
+        position: absolute;
+        font-size: 10rem;
+        font-weight: bold;
+        font-family: sans-serif;
+        animation-duration: .8s;
+        animation-fill-mode: forwards
+      }
+
+      h1:nth-child(1) {
+        animation-name: animation;
+      }
+
+      h1:nth-child(2) {
+        animation-name: animation2;
+        color: #777;
+      }
+
+      h1:nth-child(3) {
+        animation-name: animation3;
+        color: #bbb;
+      }
+
+      @keyframes animation {
+        0% {
+          transform: rotate3d(0,0,0, 0) translate3d(0, 0, 0);
+        }
+        100%{
+          transform: rotate3d(0,10,0,10deg) translate3d(10px, 0, 0);
+        }
+      }
+
+      @keyframes animation2 {
+        0% {
+          transform: rotate3d(0,0,0, 0) translate3d(0, 0, 50px);
+        }
+        100%{
+          transform: rotate3d(0,10,0,10deg) translate3d(10px, 0, 50px);
+        }
+      }
+
+      @keyframes animation3 {
+        0% {
+          transform: rotate3d(0,0,0, 0) translate3d(0, 0, 150px);
+        }
+        100%{
+          transform: rotate3d(0,10,0,10deg) translate3d(10px, 0, 150px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Dot Line</h1>
+      <h1>Dot Line</h1>
+      <h1>Dot Line</h1>
+    </main>
+  </body>
+</html>
